@@ -1,0 +1,22 @@
+@model MusicEventsApp.Models.MusicEvent
+
+<h1>Додати подію</h1>
+<form asp-action="Create">
+    <div class="form-group">
+        <label>Назва</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Виконавець</label>
+        <input asp-for="Artist" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Місто</label>
+        <input asp-for="City" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Ціна</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Зберегти</button>
+</form>

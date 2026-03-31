@@ -1,0 +1,38 @@
+@model MusicEventsApp.Models.MusicEvent
+
+@{ ViewData["Title"] = "Редагувати подію"; }
+
+<div class="container mt-5">
+    <div class="card bg-dark text-white p-4" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <h2 class="text-primary mb-4">Редагувати подію</h2>
+
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group mb-3">
+                <label class="control-label text-secondary">Назва події</label>
+                <input asp-for="Title" class="form-control bg-dark text-white border-secondary" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label text-secondary">Виконавець</label>
+                <input asp-for="Artist" class="form-control bg-dark text-white border-secondary" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label text-secondary">Місто</label>
+                <input asp-for="City" class="form-control bg-dark text-white border-secondary" />
+            </div>
+
+            <div class="form-group mb-4">
+                <label class="control-label text-secondary">Ціна (грн)</label>
+                <input asp-for="Price" class="form-control bg-dark text-white border-secondary" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary px-4">Зберегти зміни</button>
+                <a asp-action="Index" class="btn btn-outline-secondary px-4 ml-2">Назад до списку</a>
+            </div>
+        </form>
+    </div>
+</div>
